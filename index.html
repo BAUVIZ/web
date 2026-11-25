@@ -1,0 +1,146 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BAUVIZ 2027 &mdash; Visualization in Architecture, Engineering &amp; Construction</title>
+<style>
+:root{--ink:#1c1f21;--mut:#66707a;--teal:#1f6d7e;--teal2:#2d889d;--line:#d7dde0;--bg:#fbfcfc;--body:#2c3135;--body2:#3c4246}
+body.dark{--ink:#eceff0;--mut:#97a2a8;--teal:#4fb0c3;--teal2:#6cc7d8;--line:#2b3338;--bg:#0f1416;--body:#c6cfce;--body2:#a9b5ba}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;font-family:Georgia,"Times New Roman",serif;color:var(--ink);line-height:1.6;background:var(--bg);transition:background .3s,color .3s}
+.sans{font-family:"Helvetica Neue",Arial,sans-serif}
+a{color:var(--teal);text-decoration:none;border-bottom:1px solid rgba(31,109,126,.3)} a:hover{border-bottom-color:var(--teal)}
+nav.top{display:flex;align-items:center;justify-content:space-between;padding:18px 44px;
+  border-bottom:2px solid var(--ink)}
+nav.top .brand{display:flex;align-items:center;gap:14px;font-family:"Helvetica Neue",Arial,sans-serif;
+  font-weight:700;letter-spacing:2px;font-size:18px}
+nav.top .brand img{height:34px}
+nav.top ul{display:flex;gap:26px;list-style:none;margin:0;padding:0;font-family:"Helvetica Neue",Arial,sans-serif;font-size:13px;letter-spacing:.5px}
+nav.top li a{color:var(--ink);border-bottom:none} nav.top li a:hover{color:var(--teal)}
+.nav-right{display:flex;align-items:center;gap:18px}
+.theme-btn{font-family:"Helvetica Neue",Arial,sans-serif;font-size:12px;letter-spacing:1px;
+  border:1.5px solid var(--line);background:transparent;color:var(--ink);border-radius:999px;
+  padding:7px 16px;cursor:pointer;display:inline-flex;align-items:center;gap:8px;transition:all .25s}
+.theme-btn:hover{border-color:var(--teal);color:var(--teal)}
+.theme-btn .ico{font-size:14px;line-height:1}
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:end;
+  padding:72px 44px 56px;max-width:1180px;margin:0 auto}
+.hero .logo{height:210px;margin-bottom:22px}
+.hero .sub{font-size:20px;font-style:italic;color:var(--mut);margin:0 0 0}
+.hero .facts{border-left:2px solid var(--teal);padding-left:22px;font-family:"Helvetica Neue",Arial,sans-serif}
+.hero .facts div{margin:12px 0;font-size:14px}
+.hero .facts .k{color:var(--mut);font-size:11px;text-transform:uppercase;letter-spacing:1.5px}
+.hero .facts .val{font-size:16px;color:var(--ink);font-weight:600}
+main{max-width:1180px;margin:0 auto;padding:0 44px}
+section{padding:46px 0;border-top:1px solid var(--line)}
+.sec-head{margin-bottom:26px}
+
+.sec-head h2{font-family:"Helvetica Neue",Arial,sans-serif;font-size:34px;margin:0 0 4px;letter-spacing:-.5px;padding-bottom:10px;border-bottom:2px solid var(--ink);display:inline-block}
+.lead{font-size:18px;color:var(--body);max-width:760px}
+h3{font-family:"Helvetica Neue",Arial,sans-serif;font-size:12px;letter-spacing:2px;text-transform:uppercase;
+  color:var(--mut);margin:34px 0 16px}
+.pg{display:flex;flex-direction:column}
+.pg-row{display:grid;grid-template-columns:190px 1fr;gap:24px;padding:14px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.pg-row:last-child{border-bottom:none}
+.pg-t{font-family:"Helvetica Neue",Arial,sans-serif;font-variant-numeric:tabular-nums;font-weight:700;color:var(--teal);font-size:15px}
+.pg-d{font-size:16px}
+.note{font-style:italic;color:var(--mut);font-size:14px;margin-top:16px}
+.tba{font-family:"Helvetica Neue",Arial,sans-serif;font-size:24px;font-weight:700;letter-spacing:8px;color:var(--teal);margin:10px 0 0}
+.aud{columns:2;column-gap:48px;padding-left:0;list-style:none;margin:0;font-size:15.5px}
+.aud li{margin:7px 0;padding-left:18px;position:relative}
+.aud li::before{content:"";position:absolute;left:0;top:10px;width:7px;height:7px;background:var(--teal2)}
+.topics{display:grid;grid-template-columns:1fr 1fr;gap:30px 48px}
+.topic{border-top:2px solid var(--ink);padding-top:12px}
+.topic-h{font-family:"Helvetica Neue",Arial,sans-serif;font-weight:700;color:var(--teal);margin-bottom:8px;font-size:15px}
+.topic ul{margin:0;padding-left:16px;font-size:14.5px;color:var(--body2)} .topic li{margin:4px 0}
+.types{display:grid;grid-template-columns:1fr 1fr;gap:22px 40px}
+.stype{padding-top:10px;border-top:1px solid var(--line)}
+.s-name{font-family:"Helvetica Neue",Arial,sans-serif;font-weight:700;margin-bottom:5px;font-size:15px}
+.s-desc{font-size:14px;color:var(--mut)}
+.dates{display:flex;flex-direction:column}
+.dt-row{display:grid;grid-template-columns:1fr auto;gap:20px;padding:14px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.dt-row:last-of-type{border-bottom:none}
+.dt-k{font-size:16px} .dt-v{font-family:"Helvetica Neue",Arial,sans-serif;font-weight:700;color:var(--teal);font-size:16px}
+.dates-tz{font-style:italic;color:var(--mut);font-size:13px;margin-top:12px}
+.people{display:grid;grid-template-columns:1fr 1fr;gap:18px 48px}
+.p-name{font-family:"Helvetica Neue",Arial,sans-serif;font-weight:700;font-size:16px}
+.p-aff{font-size:14px;color:var(--mut)}
+.steering .people{grid-template-columns:1fr 1fr}
+.contact .mail{font-family:"Helvetica Neue",Arial,sans-serif;font-size:22px;font-weight:600}
+.support{max-width:1180px;margin:0 auto;padding:40px 44px 60px;border-top:2px solid var(--ink)}
+.support .sec-head{margin-bottom:14px}
+footer{border-top:1px solid var(--line);padding:24px 44px;font-size:13px;color:var(--mut);
+  font-family:"Helvetica Neue",Arial,sans-serif;text-align:center}
+@media(max-width:820px){.hero{grid-template-columns:1fr;gap:24px}.hero h1{font-size:52px}
+ nav.top{flex-direction:column;align-items:flex-start;gap:12px}.topics,.types,.people,.steering .people{grid-template-columns:1fr;columns:1}
+ .aud{columns:1}.sec-head{gap:14px}}
+</style></head>
+<body>
+<nav class="top"><div class="brand"><img class="logo" src="BAUVIZ-logo.svg" alt="BAUVIZ logo" style="height:34px"> BAUVIZ 2027</div>
+  <div class="nav-right"><ul><li><a href="#about">About</a></li>
+<li><a href="#program">Program</a></li>
+<li><a href="#topics">Topics</a></li>
+<li><a href="#submit">Submit</a></li>
+<li><a href="#dates">Dates</a></li>
+<li><a href="#org">Organization</a></li>
+<li><a href="#contact">Contact</a></li></ul>
+    <button id="theme-toggle" class="theme-btn" aria-label="Toggle dark mode"><span class="ico">&#9680;</span><span class="lbl">Dark</span></button>
+  </div></nav>
+<script>(function(){
+  var b=document.body,btn=document.getElementById('theme-toggle');
+  function apply(d){b.classList.toggle('dark',d);btn.querySelector('.ico').textContent=d?'☾':'☼';btn.querySelector('.lbl').textContent=d?'Light':'Dark';
+    document.querySelectorAll('.logo').forEach(function(im){im.src=d?'BAUVIZ-logo-dark.svg':'BAUVIZ-logo.svg'});
+    try{localStorage.setItem('bauviz-theme',d?'dark':'light')}catch(e){}}
+  var s;try{s=localStorage.getItem('bauviz-theme')}catch(e){}
+  if(s==='dark'){apply(true)}else if(!s&&window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches){apply(true)}
+  btn.addEventListener('click',function(){apply(!b.classList.contains('dark'))});
+})();</script>
+<header class="hero">
+  <div><img class="logo" src="BAUVIZ-logo.svg" alt="BAUVIZ logo" style="height:210px">
+    <p class="sub">Workshop in conjunction with EuroVis 2027</p></div>
+  <div class="facts">
+    <div><div class="k">Location</div><div class="val">Stuttgart, Germany</div></div>
+    <div><div class="k">Dates</div><div class="val">May 31 &ndash; June 4, 2027</div></div>
+    <div><div class="k">Format</div><div class="val">Half-day workshop</div></div>
+    <div><div class="k">Contact</div><div class="val"><a href="mailto:bauviz2027@visus.uni-stuttgart.de">bauviz2027@visus.uni-stuttgart.de</a></div></div>
+  </div>
+</header>
+<main>
+ <section id="about"><div class="sec-head"><h2>About</h2></div><p class="lead">BAUVIZ (Visualization in Architecture, Engineering &amp; Construction) brings together researchers and practitioners from visualization and the AEC disciplines to explore how visual analytics, immersive interfaces, and human-AI collaboration can support the digital transformation and circularity of the built environment. The workshop spans the full building lifecycle, from early design and simulation through construction, operation, and reuse, and extends to the scale of districts and urban systems. Within the EuroVis community, it provides a forum for sharing new techniques, identifying emerging challenges, and building interdisciplinary collaborations.</p></section>
+ <section id="program"><div class="sec-head"><h2>Program</h2></div><p class="tba">TBA</p></section>
+ <section id="format"><div class="sec-head"><h2>Format &amp; Audience</h2></div><p class="lead">BAUVIZ is a half-day workshop. We plan for a format that fosters individual paper presentations as thought-provoking seeds, followed by an interactive discussion with all workshop participants.</p>
+   <h3>Target audience</h3><ul class="aud"><li>Visualization &amp; Visual Analytics Researchers</li>
+<li>Computer Graphics &amp; HCI Researchers</li>
+<li>Architects &amp; Computational Designers</li>
+<li>AEC Practitioners</li>
+<li>Civil &amp; Structural Engineers</li>
+<li>Construction Engineers &amp; Managers</li>
+<li>BIM &amp; Digital Twin Experts</li>
+<li>Urban Informatics Researchers</li></ul></section>
+ <section id="topics"><div class="sec-head"><h2>Topics</h2></div><div class="topics"><div class="topic" data-i="1"><div class="topic-h">Architecture &amp; Computational Design</div><ul><li>Generative and computational design visualization</li><li>Design space exploration</li><li>Architectural performance visualization</li><li>Explainable AI for design workflows</li><li>AI copilots for architectural design</li><li>Urban visualization and GIS</li></ul></div>
+<div class="topic" data-i="2"><div class="topic-h">Engineering &amp; Simulation</div><ul><li>Engineering simulation visualization</li><li>Uncertainty visualization</li><li>Optimization and sensitivity analysis</li><li>Comparative design evaluation</li><li>Human-in-the-loop engineering workflows</li><li>Life-cycle assessment &amp; embodied carbon</li></ul></div>
+<div class="topic" data-i="3"><div class="topic-h">Digital Fabrication &amp; Construction</div><ul><li>Construction planning and monitoring</li><li>Reality capture and point-cloud visualization</li><li>Robotic fabrication and construction</li><li>Circular construction</li><li>Construction site safety &amp; workforce analytics</li><li>Renovation and retrofitting workflows</li></ul></div>
+<div class="topic" data-i="4"><div class="topic-h">BIM &amp; Digital Twins</div><ul><li>BIM visualization and interaction</li><li>Semantic and interoperable data</li><li>Digital twin analytics</li><li>Sensor and IoT data</li><li>Scalable rendering of large BIM models</li></ul></div>
+<div class="topic" data-i="5"><div class="topic-h">Human&ndash;Building Interaction &amp; Facility Mgmt.</div><ul><li>Indoor environmental quality &amp; occupant comfort</li><li>Building performance monitoring &amp; fault detection</li><li>Energy consumption and smart-meter analytics</li><li>Facility management and dashboards</li><li>Structural health monitoring &amp; asset condition</li></ul></div>
+<div class="topic" data-i="6"><div class="topic-h">Immersive &amp; Collaborative Visualization</div><ul><li>Virtual and augmented reality for AEC</li><li>Immersive analytics for building and site data</li><li>On-site AR guidance for construction &amp; maintenance</li><li>Collaborative visualization environments</li><li>Embodied interaction and collaboration</li><li>Stakeholder communication and education</li></ul></div></div></section>
+ <section id="submit"><div class="sec-head"><h2>Submission</h2></div><div class="types"><div class="stype"><div class="s-name">Short research papers</div><div class="s-desc">Original work in the EuroVis short paper format (up to 4 pages, two-column Eurographics style; abstract max. 150 words).</div></div>
+<div class="stype"><div class="s-name">Position / vision papers</div><div class="s-desc">Foster discussion and envision future directions in built-environment visualization.</div></div>
+<div class="stype"><div class="s-name">Industrial experience reports</div><div class="s-desc">Lessons learned from deploying visualization in real AEC workflows.</div></div>
+<div class="stype"><div class="s-name">Demonstrations</div><div class="s-desc">Working systems, tools, or interactive artifacts.</div></div>
+<div class="stype"><div class="s-name">Work-in-progress</div><div class="s-desc">Early-stage results open to critique.</div></div></div>
+   <h3>Process &amp; policies</h3><p class="lead">All contributions are handled through the Precision Conference System (PCS) via EuroVis 2027 under the BAUVIZ workshop track. Please read and follow the EuroVis 2027 and Eurographics author guidelines, as well as the Eurographics policy on the use of Generative AI tools. Submissions are peer-reviewed by at least two IPC members and one paper chair. Accepted short papers are published in the Eurographics Digital Library (archival) under a CC&nbsp;BY license; at least one author must register for and attend EuroVis 2027 in person.</p></section>
+ <section id="dates"><div class="sec-head"><h2>Important Dates</h2></div><div class="dates"><div class="dt-row"><span class="dt-k">Paper submission due</span><span class="dt-v">Mar 05, 2027</span></div>
+<div class="dt-row"><span class="dt-k">Notification</span><span class="dt-v">Apr 16, 2027</span></div>
+<div class="dt-row"><span class="dt-k">Camera-ready</span><span class="dt-v">May 03, 2027</span></div>
+<div class="dt-row"><span class="dt-k">Workshop</span><span class="dt-v">May 31 &ndash; Jun 4, 2027, Stuttgart</span></div><p class="dates-tz">All deadlines are AoE &mdash; Anywhere on Earth.</p></div></section>
+ <section id="org"><div class="sec-head"><h2>Organization</h2></div>
+   <h3 style="margin-top:0">Organizers</h3><div class="people"><div class="person"><div class="p-name">Kuno Kurzhals</div><div class="p-aff">University of Stuttgart / TU Darmstadt, Germany</div></div>
+<div class="person"><div class="p-name">Xiliu Yang</div><div class="p-aff">University of Stuttgart / Max Planck Institute for Intelligent Systems, Germany</div></div>
+<div class="person"><div class="p-name">Andrew Vande Moere</div><div class="p-aff">Katholieke Universiteit Leuven, Belgium</div></div></div>
+   <h3>Steering committee</h3><div class="steering"><div class="people"><div class="person"><div class="p-name">Daniel Weiskopf</div><div class="p-aff">University of Stuttgart, Germany</div></div>
+<div class="person"><div class="p-name">Achim Menges</div><div class="p-aff">University of Stuttgart, Germany</div></div></div></div>
+   <h3>Program committee</h3><p class="lead">An international committee representing visualization, architecture, engineering, digital twins, HCI, and AI will be announced shortly.</p></section>
+ <section id="contact"><div class="sec-head"><h2>Contact</h2></div>
+   <p class="contact"><a class="mail" href="mailto:bauviz2027@visus.uni-stuttgart.de">bauviz2027@visus.uni-stuttgart.de</a></p></section>
+</main>
+<section class="support"><div class="sec-head"><h2>Support</h2></div><p class="lead">The workshop is supported by the Cluster of Excellence &ldquo;Integrative Computational Design and Construction for Architecture&rdquo; (IntCDC) at the University of Stuttgart &mdash; one of the world&rsquo;s leading interdisciplinary initiatives in computational design and construction, bringing together architecture, engineering, robotics, computer science, and visualization.</p></section>
+<footer>BAUVIZ 2027 &mdash; a EuroVis workshop. Built with the Eurographics community.</footer>
+</body></html>

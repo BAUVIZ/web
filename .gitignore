@@ -1,0 +1,7 @@
+designs/node_modules/
+*.pyc
+__pycache__/
+# full-size render artifacts (regenerable via designs/shot*.py)
+index_*_full.png
+designs/*_full.png
+designs/*_hero.png
