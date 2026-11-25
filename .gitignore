@@ -1,5 +1,7 @@
-# This repo intentionally contains only index.html.
+# This repo intentionally contains index.html + the two logos it references.
 # Ignore everything else in the working tree:
 *
 !index.html
+!BAUVIZ-logo.svg
+!BAUVIZ-logo-dark.svg
 !.gitignore
