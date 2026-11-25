@@ -61,7 +61,7 @@ h3{font-size:15px;text-transform:uppercase;letter-spacing:1.5px;color:var(--mut)
 .dates-tz{font-size:13px;color:var(--mut);margin-top:10px;font-style:italic}
 .people{display:flex;flex-direction:column;gap:14px}
 .person{display:flex;flex-direction:column}
-.p-name{font-weight:700;font-size:16px} .p-aff{font-size:14px;color:var(--mut)}
+.p-name{font-weight:700;font-size:16px} .p-aff{font-size:15px;color:var(--mut)}
 .steering .people{display:grid;grid-template-columns:1fr 1fr;gap:14px 32px}
 .aud{columns:2;column-gap:40px;padding-left:18px;margin:0} .aud li{margin:4px 0;font-size:14.5px;break-inside:avoid}
 .contact p{font-size:16px;margin:0} .contact a{font-weight:600}
@@ -93,7 +93,6 @@ A_BODY = f"""
    <h3>Program committee</h3><p class="lead">{B.PC_NOTE}</p></section>
  <section id="contact" class="contact"><h2>Contact</h2><p>{B.CONTACT}</p></section>
 </main>
-<section class="support"><div class="wrap"><h2>Support</h2><p class="lead">{B.SUPPORT}</p></div></section>
 <footer>{B.FOOT}</footer>
 """
 
@@ -201,7 +200,6 @@ B_BODY = f"""
  <section id="contact"><h2><span class="idx mono">08</span>Contact</h2>
    <div class="contact"><span class="mail">{B.CONTACT}</span><span style="color:var(--mut)">for any further enquiry</span></div></section>
 </main>
-<section class="support"><div class="wrap"><h2 style="border:none"><span class="idx mono">09</span>Support</h2><p class="lead">{B.SUPPORT}</p></div></section>
 </div>
 <footer>{B.FOOT}</footer>
 """
@@ -252,17 +250,19 @@ h3{font-family:"Helvetica Neue",Arial,sans-serif;font-size:12px;letter-spacing:2
 .pg-d{font-size:16px}
 .note{font-style:italic;color:var(--mut);font-size:14px;margin-top:16px}
 .tba{font-family:"Helvetica Neue",Arial,sans-serif;font-size:24px;font-weight:700;letter-spacing:8px;color:var(--teal);margin:10px 0 0}
-.aud{columns:2;column-gap:48px;padding-left:0;list-style:none;margin:0;font-size:15.5px}
-.aud li{margin:7px 0;padding-left:18px;position:relative}
-.aud li::before{content:"";position:absolute;left:0;top:10px;width:7px;height:7px;background:var(--teal2)}
+.aud{columns:2;column-gap:48px;padding-left:0;list-style:none;margin:0;font-size:15px}
+.aud li{margin:6px 0;padding-left:18px;position:relative;break-inside:avoid}
+.aud li::before{content:"";position:absolute;left:0;top:9px;width:7px;height:7px;background:var(--teal2)}
 .topics{display:grid;grid-template-columns:1fr 1fr;gap:30px 48px}
 .topic{border-top:2px solid var(--ink);padding-top:12px}
 .topic-h{font-family:"Helvetica Neue",Arial,sans-serif;font-weight:700;color:var(--teal);margin-bottom:8px;font-size:15px}
-.topic ul{margin:0;padding-left:16px;font-size:14.5px;color:var(--body2)} .topic li{margin:4px 0}
+.topic ul{margin:0;padding-left:0;list-style:none;font-size:15px;color:var(--body)}
+.topic li{margin:6px 0;padding-left:18px;position:relative;break-inside:avoid}
+.topic li::before{content:"";position:absolute;left:0;top:9px;width:7px;height:7px;background:var(--teal2)}
 .types{display:grid;grid-template-columns:1fr 1fr;gap:22px 40px}
 .stype{padding-top:10px;border-top:1px solid var(--line)}
 .s-name{font-family:"Helvetica Neue",Arial,sans-serif;font-weight:700;margin-bottom:5px;font-size:15px}
-.s-desc{font-size:14px;color:var(--mut)}
+.s-desc{font-size:15px;color:var(--mut)}
 .dates{display:flex;flex-direction:column}
 .dt-row{display:grid;grid-template-columns:1fr auto;gap:20px;padding:14px 0;border-bottom:1px solid var(--line);align-items:baseline}
 .dt-row:last-of-type{border-bottom:none}
@@ -322,7 +322,6 @@ C_BODY = f"""
  <section id="contact"><div class="sec-head"><span class="num">08</span><h2>Contact</h2></div>
    <p class="contact"><a class="mail" href="mailto:{B.CONTACT}">{B.CONTACT}</a></p></section>
 </main>
-<section class="support"><div class="sec-head"><span class="num">09</span><h2>Support</h2></div><p class="lead">{B.SUPPORT}</p></section>
 <footer>{B.FOOT}</footer>
 """
 
@@ -450,7 +449,6 @@ D_BODY = f"""
  <section id="contact"><div class="sec-tag"><span class="bar"></span><span class="lbl">08 &middot; Contact</span></div><h2>Get in touch</h2>
    <p class="contact"><a class="mail" href="mailto:{B.CONTACT}">{B.CONTACT}</a></p></section>
 </main>
-<section class="support"><div class="sec-tag"><span class="bar"></span><span class="lbl">09 &middot; Support</span></div><h2>Supported by</h2><p class="lead">{B.SUPPORT}</p></section>
 <footer>{B.FOOT}</footer>
 </div>
 </div>

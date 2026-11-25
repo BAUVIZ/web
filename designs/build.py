@@ -119,16 +119,23 @@ SUBMIT_PROC = (
     "register for and attend EuroVis 2027 in person."
 )
 
-DATES = [
+# Dates not yet public (2026-11-25, kuno): to be announced around the beginning of
+# March 2027. Keep this list to restore once announced:
+DATES_ANNOUNCED = [
     ("Paper submission due", "Mar 05, 2027"),
     ("Notification", "Apr 16, 2027"),
     ("Camera-ready", "May 03, 2027"),
-    ("Workshop", "May 31 &ndash; Jun 4, 2027, Stuttgart"),
 ]
-DATES_TZ = "All deadlines are AoE &mdash; Anywhere on Earth."
+DATES = [
+    ("Paper submission due", "TBA"),
+    ("Notification", "TBA"),
+    ("Camera-ready", "TBA"),
+    ("EuroVis 2027", "May 31 &ndash; Jun 4, 2027, Stuttgart"),
+]
+DATES_TZ = "Workshop day: TBA &mdash; dates will be announced in early March 2027."
 
 ORG = [
-    ("Kuno Kurzhals", "University of Stuttgart / TU Darmstadt, Germany"),
+    ("Kuno Kurzhals", "University of Stuttgart, Germany"),
     ("Xiliu Yang", "University of Stuttgart / Max Planck Institute for Intelligent Systems, Germany"),
     ("Andrew Vande Moere", "Katholieke Universiteit Leuven, Belgium"),
 ]
@@ -138,13 +145,14 @@ STEERING = [
 ]
 PC_NOTE = ("An international committee representing visualization, architecture, engineering, "
            "digital twins, HCI, and AI will be announced shortly.")
+# Support section removed from pages for now (2026-11-25, kuno) - keep text to restore:
 SUPPORT = (
     "The workshop is supported by the Cluster of Excellence &ldquo;Integrative Computational Design "
     "and Construction for Architecture&rdquo; (IntCDC) at the University of Stuttgart &mdash; one of the "
     "world&rsquo;s leading interdisciplinary initiatives in computational design and construction, "
     "bringing together architecture, engineering, robotics, computer science, and visualization."
 )
-CONTACT = "bauviz2027@visus.uni-stuttgart.de"
+CONTACT = "bauviz@visus.uni-stuttgart.de"
 TITLE = "BAUVIZ 2027"
 SUBTITLE = "Visualization in Architecture, Engineering &amp; Construction"
 META = "Stuttgart, Germany &middot; May 31 &ndash; June 4, 2027 &middot; in conjunction with EuroVis 2027"
