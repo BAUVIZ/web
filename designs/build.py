@@ -155,7 +155,7 @@ SUPPORT = (
 CONTACT = "bauviz@visus.uni-stuttgart.de"
 TITLE = "BAUVIZ 2027"
 SUBTITLE = "Visualization in Architecture, Engineering &amp; Construction"
-META = "Stuttgart, Germany &middot; May 31 &ndash; June 4, 2027 &middot; in conjunction with EuroVis 2027"
+META = "Stuttgart, Germany &middot; TBA &middot; in conjunction with EuroVis 2027"
 FOOT = "BAUVIZ 2027 &mdash; a EuroVis workshop. Built with the Eurographics community."
 
 # ----------------------------------------------------------------------------

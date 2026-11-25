@@ -181,7 +181,7 @@ B_BODY = f"""
     <div class="tag mono">EuroVis 2027 &middot; Half-day workshop</div>
     <h1>BAU<b>VIZ</b> 2027</h1>
     <p class="sub">{B.SUBTITLE}</p>
-    <p class="meta"><span>Stuttgart, Germany</span> &middot; May 31 &ndash; June 4, 2027 &middot; in conjunction with EuroVis 2027</p>
+    <p class="meta"><span>Stuttgart, Germany</span> &middot; TBA &middot; in conjunction with EuroVis 2027</p>
   </div>
 </header>
 <main>
@@ -301,7 +301,7 @@ C_BODY = f"""
     <p class="sub">Workshop in conjunction with EuroVis 2027</p></div>
   <div class="facts">
     <div><div class="k">Location</div><div class="val">Stuttgart, Germany</div></div>
-    <div><div class="k">Dates</div><div class="val">May 31 &ndash; June 4, 2027</div></div>
+    <div><div class="k">Dates</div><div class="val">TBA</div></div>
     <div><div class="k">Format</div><div class="val">Half-day workshop</div></div>
     <div><div class="k">Contact</div><div class="val"><a href="mailto:{B.CONTACT}">{B.CONTACT}</a></div></div>
   </div>
@@ -426,7 +426,7 @@ D_BODY = f"""
       <p class="sub">{B.SUBTITLE}</p>
       <div class="chips">
         <span class="chip">Stuttgart, Germany</span>
-        <span class="chip"><b>May 31 &ndash; Jun 4, 2027</b></span>
+        <span class="chip"><b>TBA</b></span>
         <span class="chip">in conjunction with EuroVis 2027</span>
         <span class="chip">Half-day workshop</span>
       </div>
