@@ -137,6 +137,15 @@ nav.top li a:hover { color: var(--teal); }
   letter-spacing: 1.5px;
 }
 .hero .facts .val { font-size: 16px; color: var(--ink); font-weight: 600; }
+.hero .facts .dates-sub {
+  list-style: none;
+  margin: 2px 0 4px;
+  padding: 0;
+  font-size: 13px;
+  color: var(--mut);
+  line-height: 1.7;
+}
+.hero .facts .dates-sub strong { color: var(--ink); font-weight: 600; }
 
 /* ---------- page layout / sections ---------- */
 main { max-width: 1180px; margin: 0 auto; padding: 0 44px; }
@@ -346,10 +355,12 @@ footer {
   </div>
   <div class="facts">
     <div><div class="k">Location</div><div class="val">Stuttgart, Germany</div></div>
-    <div><div class="k">Dates</div><div class="val">TBA</div></div>
-    <div><div class="k">Submission due</div><div class="val">26 Feb 2027</div></div>
-    <div><div class="k">Notification</div><div class="val">06 Apr 2027</div></div>
-    <div><div class="k">Camera-ready</div><div class="val">22 Apr 2027</div></div>
+    <div class="k">Dates</div>
+    <ul class="dates-sub">
+      <li>Paper submission due &mdash; <strong>26 Feb 2027</strong></li>
+      <li>Notification &mdash; <strong>06 Apr 2027</strong></li>
+      <li>Camera-ready &mdash; <strong>22 Apr 2027</strong></li>
+    </ul>
     <div><div class="k">Format</div><div class="val">Half-day workshop</div></div>
     <div><div class="k">Contact</div><div class="val"><a href="mailto:bauviz@visus.uni-stuttgart.de">bauviz@visus.uni-stuttgart.de</a></div></div>
   </div>
